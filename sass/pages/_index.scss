@@ -1,0 +1,52 @@
+body {
+  background-image: linear-gradient(to bottom, #78c2fe, #379af2, #0071e1, #0046c9, #0108a9);
+
+  .main {
+    @include absCenter;
+
+    &__title {
+      font-size: 4rem;
+      font-family: monospace;
+      text-align: center;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: transparent;
+      background-image: linear-gradient(to right, $color-secondary, $color-green);
+      -webkit-background-clip: text;
+      margin: 4rem auto;
+    }
+
+    &__list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &__item {
+      display: flex;
+      text-align: center;
+      margin: 1rem auto;
+    }
+
+    &__link {
+      &:link,
+      &:visited {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-primary;
+        padding: 1rem;
+        font-size: 2.5rem;
+        background-color: rgba($color-secondary, 0.8);
+        font-weight: 700;
+        transition: all 0.3s linear;
+
+        &:hover {
+          background-color: transparent;
+          color: rgba($color-secondary, 0.8);
+          transform: translateY(5px);
+        }
+      }
+    }
+  }
+}

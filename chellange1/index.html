@@ -7,7 +7,6 @@
         content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet"
         href="../css/style.css">
-
   <title>Js courses</title>
 </head>
 
@@ -16,15 +15,54 @@
     <h1 class="main__title">
       Coding chellange 1
     </h1>
-    <pre class="prettyprint">class Voila {
-        public:
-          // Voila
-          static const string VOILA = "Voila";
+    <section class="section">
+      <div class="section__task">
+        <h2 class="section__second-title">
+          Task 1
+        </h2>
+        <p>
+          BMI: mass / height^2 = mass / (height * height)
+          </br>1.store mark and john's mass and height in variables.
+          </br>2.calculate both their bmis.
+          </br>3.create a boolean variable containing information about whether Mark has a higher BMI than John
+          </br>4.Print a string to the console containing the variable from Step 3. (Something like "Is Mark's BMI
+          higher
+          than
+          John's? true").
+        </p>
+      </div>
+      <div class="section__code">
+        <h2 class="section__second-title">
+          Code
+        </h2>
+        <pre class="prettyprint">
+        const Mark = {
+          mass: "50kg",
+          height: "37cm"
+        };
         
-          // will not interfere with embedded <a href="#voila2">tags</a>.
+        const John = {
+          mass: "100kg",
+          height: "195cm"
+        };
+
+        const calcBmi = person => {
+          const mass = parseInt(person.mass.slice(0, person.mass.length - 2));
+          const height = parseInt(person.height.slice(0, person.height.length - 2));
+          return mass / height * height;
         }
-    </pre>
+
+        const markBMI = calcBmi(Mark);
+        const JohnBMI = calcBmi(John);
+        const res = markBMI > JohnBMI
+                    ? `Mark has ${markBMI} grater BMI then John ${JohnBMI}`
+                    : `John ${JohnBMI} has grater BMI then Mark ${markBMI}`;
+        console.log(res);
+        </pre>
+      </div>
+    </section>
   </main>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 
 </html>

@@ -27,7 +27,8 @@ body {
     font-size: 4rem;
     font-weight: 400;
     letter-spacing: 1.5rem;
-    text-align: center; }
+    text-align: center;
+    margin: 0 auto; }
     @media screen and (max-width: 800px) {
       .heading-primary--main {
         letter-spacing: 0rem;
@@ -75,6 +76,8 @@ body {
       display: flex;
       text-align: center;
       margin: 1rem auto; }
+      body .main__item:last-child {
+        margin-bottom: 6rem; }
     body .main__link:link, body .main__link:visited {
       text-decoration: none;
       text-transform: uppercase;
@@ -96,3 +99,6 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     margin: 2rem auto;
     overflow: auto; }
+
+.qoute_containter:not(:first-child()) {
+  text-align: center; }

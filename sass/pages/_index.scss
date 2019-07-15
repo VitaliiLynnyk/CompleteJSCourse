@@ -7,15 +7,6 @@ body {
     padding: 2rem;
     min-height: 100vh;
 
-    &__title {
-      font-size: 4rem;
-      font-family: monospace;
-      text-align: center;
-      letter-spacing: 0.15em;
-      font-weight: 700;
-      margin: 4rem auto;
-    }
-
     &__list {
       list-style: none;
       display: flex;

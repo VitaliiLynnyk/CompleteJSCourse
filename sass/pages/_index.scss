@@ -2,7 +2,10 @@ body {
   background-image: linear-gradient(to bottom, #78c2fe, #379af2, #0071e1, #0046c9, #0108a9);
 
   .main {
-    @include absCenter;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+    min-height: 100vh;
 
     &__title {
       font-size: 4rem;
@@ -10,9 +13,6 @@ body {
       text-align: center;
       letter-spacing: 0.15em;
       font-weight: 700;
-      color: transparent;
-      background-image: linear-gradient(to right, $color-secondary, $color-green);
-      -webkit-background-clip: text;
       margin: 4rem auto;
     }
 

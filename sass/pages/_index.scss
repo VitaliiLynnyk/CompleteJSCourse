@@ -48,6 +48,7 @@ body {
         &:hover {
           background-color: transparent;
           color: rgba($color-secondary, 0.8);
+          letter-spacing: 0.5rem;
           transform: translateY(5px);
         }
       }

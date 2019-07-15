@@ -1,0 +1,33 @@
+.footer {
+  section {
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      color: $color-secondary;
+      font-size: 2rem;
+      text-transform: uppercase;
+
+      li {
+        margin: 0 2rem;
+        display: flex;
+
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      ul {
+        flex-direction: column;
+        li {
+          justify-content: center;
+          margin: 2rem auto;
+        }
+      }
+    }
+  }
+}

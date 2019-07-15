@@ -25,10 +25,10 @@ body {
   .heading-primary--main {
     display: block;
     font-size: 4rem;
-    font-weight: 400;
     letter-spacing: 1.5rem;
-    text-align: center;
-    margin: 0 auto; }
+    margin: 0 auto;
+    font-family: cursive;
+    font-weight: 900; }
     @media screen and (max-width: 800px) {
       .heading-primary--main {
         letter-spacing: 0rem;
@@ -53,9 +53,25 @@ body {
   text-transform: uppercase; }
 
 .paragraph {
-  font-size: 1.6rem; }
-  .paragraph:not(:last-child) {
-    margin-bottom: 3rem; }
+  font-size: 1.8rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
 
 body {
   background-image: linear-gradient(to bottom, #78c2fe, #379af2, #0071e1, #0046c9, #0108a9); }
@@ -75,7 +91,6 @@ body {
       flex-direction: column; }
     body .main__item {
       display: flex;
-      text-align: center;
       margin: 1rem auto; }
       body .main__item:last-child {
         margin-bottom: 6rem; }
@@ -108,6 +123,6 @@ body {
     color: #fce90d; }
   .qoute_containter p {
     color: #04fc04;
-    text-align: center;
     font-family: monospace;
+    text-align: center;
     text-shadow: 1px 1px 1px #333, 3px 3px 5px #04fc04; }

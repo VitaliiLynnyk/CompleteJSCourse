@@ -21,7 +21,6 @@ body {
 
     &__item {
       display: flex;
-      text-align: center;
       margin: 1rem auto;
 
       &:last-child {
@@ -72,8 +71,8 @@ body {
 
   p {
     color: $color-green;
-    text-align: center;
     font-family: monospace;
+    text-align: center;
     text-shadow: 1px 1px 1px #333, 3px 3px 5px $color-green;
   }
 }

@@ -1,11 +1,11 @@
 body {
   background-image: linear-gradient(to bottom, #78c2fe, #379af2, #0071e1, #0046c9, #0108a9);
+  min-height: 100vh;
 
   .main {
     width: 80%;
     margin: 0 auto;
     padding: 2rem;
-    min-height: 100vh;
 
     @media screen and (max-width: 800px) {
       width: 100%;
@@ -27,10 +27,6 @@ body {
 
       &:hover {
         transform: translateY(5px);
-      }
-
-      &:last-child {
-        margin-bottom: 6rem;
       }
     }
 
@@ -70,6 +66,8 @@ body {
 .qoute_containter {
   background-color: rgba(#333, 0.2);
   padding: 2rem;
+  min-height: 230px;
+  overflow-y: auto;
 
   h2 {
     color: $color-secondary;

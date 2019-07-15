@@ -49,7 +49,7 @@
         const calcBmi = person => {
           const mass = parseInt(person.mass.slice(0, person.mass.length - 2));
           const height = parseInt(person.height.slice(0, person.height.length - 2));
-          return mass / height * height;
+          return mass / ( height * height );
         }
 
         const markBMI = calcBmi(Mark);

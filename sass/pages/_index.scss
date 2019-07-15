@@ -7,6 +7,11 @@ body {
     padding: 2rem;
     min-height: 100vh;
 
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      padding: 0;
+    }
+
     &__list {
       list-style: none;
       display: flex;
@@ -31,6 +36,11 @@ body {
         background-color: rgba($color-secondary, 0.8);
         font-weight: 700;
         transition: all 0.3s linear;
+        min-width: 400px;
+
+        @media screen and (max-width: 800px) {
+          min-width: 100px;
+        }
 
         &:hover {
           background-color: transparent;
@@ -44,5 +54,6 @@ body {
   pre {
     background-color: rgba(white, 0.5);
     margin: 2rem auto;
+    overflow: auto;
   }
 }

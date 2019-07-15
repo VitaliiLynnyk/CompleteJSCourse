@@ -22,6 +22,12 @@ body {
     &__item {
       display: flex;
       margin: 1rem auto;
+      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
+      transition: all 0.3s linear;
+
+      &:hover {
+        transform: translateY(5px);
+      }
 
       &:last-child {
         margin-bottom: 6rem;
@@ -38,7 +44,7 @@ body {
         font-size: 2.5rem;
         background-color: rgba($color-secondary, 0.8);
         font-weight: 700;
-        transition: all 0.3s linear;
+        transition: all 0.3s ease-in-out;
         min-width: 400px;
 
         @media screen and (max-width: 800px) {
@@ -48,8 +54,7 @@ body {
         &:hover {
           background-color: transparent;
           color: rgba($color-secondary, 0.8);
-          letter-spacing: 0.5rem;
-          transform: translateY(5px);
+          letter-spacing: 0.4rem;
         }
       }
     }

@@ -101,10 +101,10 @@ body {
     overflow: auto; }
 
 .qoute_containter {
-  background-color: #082234;
+  background-color: rgba(51, 51, 51, 0.2);
   padding: 2rem; }
   .qoute_containter h2 {
-    color: #fc0404; }
+    color: #9c0404; }
   .qoute_containter p {
     color: #04fc04;
     text-align: center;

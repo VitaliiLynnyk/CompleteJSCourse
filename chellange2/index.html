@@ -46,14 +46,15 @@
         const mikeTeamAVG = getAvg(mikeTeam);
         const maryTeamAVG = getAvg(maryTeam);
         
-        johnTeamAVG >= mikeTeamAVG && johnTeamAVG >= maryTeamAVG ?
-        console.log(`johnTeam won with avg = ${johnTeamAVG}`)
-        : mikeTeamAVG > johnTeamAVG && mikeTeamAVG > maryTeamAVG ?
-        console.log(`mikeTeam won with avg = ${mikeTeamAVG}`)
-        : maryTeamAVG > johnTeamAVG && maryTeamAVG > mikeTeamAVG ?
-        console.log(`maryTeam won with avg = ${maryTeamAVG}`)
-        : console.log(`Ooopppss smth broken`);
-        
+        if (johnTeamAVG >= mikeTeamAVG && johnTeamAVG >= maryTeamAVG) {
+          console.log(`johnTeam won with avg = ${johnTeamAVG}`);
+        } else if (mikeTeamAVG > johnTeamAVG && mikeTeamAVG >= maryTeamAVG) {
+          console.log(`mikeTeam won with avg = ${mikeTeamAVG}`);
+        } else if (maryTeamAVG > johnTeamAVG && maryTeamAVG > mikeTeamAVG){
+          console.log(`maryTeam won with avg = ${maryTeamAVG}`);
+        } else {
+          console.log(`Ooopppss smth broken`);
+        }
 
         function getAvg(arr) {
           return arr.reduce((a, b) => a + b, 0) / arr.length;

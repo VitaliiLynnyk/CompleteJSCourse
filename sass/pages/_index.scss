@@ -19,17 +19,20 @@ body {
       flex-wrap: wrap;
       max-height: 100vh;
       overflow-y: auto;
+      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.26);
+      padding: 2rem;
     }
 
     &__item {
       display: flex;
-      margin: 1rem auto;
-      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
+      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear;
       @include setBgrColor;
 
       &:hover {
-        transform: translateY(5px);
+        box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
+        transform: translateY(5px) scale(1.1);
+        background-color: $color-primary;
       }
     }
 
@@ -44,17 +47,13 @@ body {
         background-color: rgba($color-secondary, 0.8);
         font-weight: 400;
         transition: all 0.3s ease-in-out;
-        min-width: 400px;
-
-        @media screen and (max-width: 800px) {
-          min-width: 100px;
-        }
 
         &:hover {
           background-color: transparent;
           color: rgba($color-secondary, 0.8);
-          letter-spacing: 0.4rem;
+          letter-spacing: 0.1rem;
           font-weight: 900;
+          border: 1px solid $color-black;
         }
       }
     }

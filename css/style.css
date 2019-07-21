@@ -119,24 +119,27 @@ body {
       justify-content: center;
       flex-wrap: wrap;
       max-height: 100vh;
-      overflow-y: auto; }
+      overflow-y: auto;
+      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.26);
+      padding: 2rem; }
     body .main__item {
       display: flex;
-      margin: 1rem auto;
-      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
+      box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear; }
       body .main__item:nth-child(1) a {
-        background-color: #3455f0; }
+        background-color: #89fcb4; }
       body .main__item:nth-child(2) a {
-        background-color: #9654e6; }
+        background-color: #3bddec; }
       body .main__item:nth-child(3) a {
-        background-color: #2fe056; }
+        background-color: #ec7227; }
       body .main__item:nth-child(4) a {
-        background-color: #5dc367; }
+        background-color: #853c49; }
       body .main__item:nth-child(5) a {
-        background-color: #544b50; }
+        background-color: #a2c2c9; }
       body .main__item:hover {
-        transform: translateY(5px); }
+        box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
+        transform: translateY(5px) scale(1.1);
+        background-color: #046bfc; }
     body .main__link:link, body .main__link:visited {
       text-decoration: none;
       text-transform: uppercase;
@@ -145,16 +148,13 @@ body {
       font-size: 2.5rem;
       background-color: rgba(252, 233, 13, 0.8);
       font-weight: 400;
-      transition: all 0.3s ease-in-out;
-      min-width: 400px; }
-      @media screen and (max-width: 800px) {
-        body .main__link:link, body .main__link:visited {
-          min-width: 100px; } }
+      transition: all 0.3s ease-in-out; }
       body .main__link:link:hover, body .main__link:visited:hover {
         background-color: transparent;
         color: rgba(252, 233, 13, 0.8);
-        letter-spacing: 0.4rem;
-        font-weight: 900; }
+        letter-spacing: 0.1rem;
+        font-weight: 900;
+        border: 1px solid #000; }
   body pre {
     background-color: rgba(255, 255, 255, 0.5);
     margin: 2rem auto;

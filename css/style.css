@@ -164,18 +164,27 @@ body {
     body .main__item {
       display: flex;
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
-      transition: all 0.3s linear;
-      animation: moveInRight 0.5s 1; }
-      body .main__item:nth-child(1) a {
-        background-color: #017326; }
-      body .main__item:nth-child(2) a {
-        background-color: #b9a95e; }
-      body .main__item:nth-child(3) a {
-        background-color: #ac3a7f; }
-      body .main__item:nth-child(4) a {
-        background-color: #a6681b; }
-      body .main__item:nth-child(5) a {
-        background-color: #39ca95; }
+      transition: all 0.3s linear; }
+      body .main__item:nth-child(1) {
+        animation: moveInRight 0.2s 1; }
+        body .main__item:nth-child(1) a {
+          background-color: #7a6862; }
+      body .main__item:nth-child(2) {
+        animation: moveInRight 0.7s 1; }
+        body .main__item:nth-child(2) a {
+          background-color: #6b2b7d; }
+      body .main__item:nth-child(3) {
+        animation: moveInRight 0.7s 1; }
+        body .main__item:nth-child(3) a {
+          background-color: #729870; }
+      body .main__item:nth-child(4) {
+        animation: moveInRight 0.6s 1; }
+        body .main__item:nth-child(4) a {
+          background-color: #3d9135; }
+      body .main__item:nth-child(5) {
+        animation: moveInRight 0.4s 1; }
+        body .main__item:nth-child(5) a {
+          background-color: #40f4a6; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);

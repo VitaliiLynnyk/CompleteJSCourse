@@ -32,7 +32,6 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear;
       @include setBgrColor;
-      animation: moveInRight 0.5s 1;
 
       &:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);

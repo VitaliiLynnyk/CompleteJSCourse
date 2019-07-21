@@ -30,6 +30,7 @@ body {
     font-size: 2rem;
     font-weight: 700;
     color: $color-secondary;
+    animation: spin 0.5s 1;
   }
 }
 
@@ -52,4 +53,5 @@ body {
 
 .paragraph {
   font-size: 1.8rem;
+  animation: moveInBottom 0.5s 1;
 }

@@ -7,6 +7,10 @@ body {
     margin: 0 auto;
     padding: 2rem;
 
+    h1 {
+      animation: moveInLeft 1s 1;
+    }
+
     @media screen and (max-width: 800px) {
       width: 100%;
       padding: 0;
@@ -28,6 +32,7 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear;
       @include setBgrColor;
+      animation: moveInRight 0.5s 1;
 
       &:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
@@ -63,6 +68,7 @@ body {
     background-color: rgba(white, 0.5);
     margin: 2rem auto;
     overflow: auto;
+    animation: moveInRight 0.5s 1;
 
     @media screen and (max-width: 600px) {
       font-size: 10px;
@@ -85,5 +91,6 @@ body {
     font-family: monospace;
     text-align: center;
     text-shadow: 1px 1px 1px #333, 3px 3px 5px $color-green;
+    animation: moveInBottom 0.5s 1;
   }
 }

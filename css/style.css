@@ -38,7 +38,8 @@ body {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: #fce90d; }
+    color: #fce90d;
+    animation: spin 0.5s 1; }
 
 .heading-secondary {
   font-family: cursive;
@@ -56,7 +57,43 @@ body {
   text-transform: uppercase; }
 
 .paragraph {
-  font-size: 1.8rem; }
+  font-size: 1.8rem;
+  animation: moveInBottom 0.5s 1; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes spin {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1;
+    transform: rotateX(360deg); } }
 
 .u-center-text {
   text-align: center !important; }
@@ -109,6 +146,8 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 2rem; }
+    body .main h1 {
+      animation: moveInLeft 1s 1; }
     @media screen and (max-width: 800px) {
       body .main {
         width: 100%;
@@ -125,17 +164,18 @@ body {
     body .main__item {
       display: flex;
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
-      transition: all 0.3s linear; }
+      transition: all 0.3s linear;
+      animation: moveInRight 0.5s 1; }
       body .main__item:nth-child(1) a {
-        background-color: #89fcb4; }
+        background-color: #017326; }
       body .main__item:nth-child(2) a {
-        background-color: #3bddec; }
+        background-color: #b9a95e; }
       body .main__item:nth-child(3) a {
-        background-color: #ec7227; }
+        background-color: #ac3a7f; }
       body .main__item:nth-child(4) a {
-        background-color: #853c49; }
+        background-color: #a6681b; }
       body .main__item:nth-child(5) a {
-        background-color: #a2c2c9; }
+        background-color: #39ca95; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);
@@ -158,7 +198,8 @@ body {
   body pre {
     background-color: rgba(255, 255, 255, 0.5);
     margin: 2rem auto;
-    overflow: auto; }
+    overflow: auto;
+    animation: moveInRight 0.5s 1; }
     @media screen and (max-width: 600px) {
       body pre {
         font-size: 10px; } }
@@ -174,4 +215,5 @@ body {
     color: #04fc04;
     font-family: monospace;
     text-align: center;
-    text-shadow: 1px 1px 1px #333, 3px 3px 5px #04fc04; }
+    text-shadow: 1px 1px 1px #333, 3px 3px 5px #04fc04;
+    animation: moveInBottom 0.5s 1; }

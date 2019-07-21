@@ -4,3 +4,17 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin random-bgr() {
+  background-color: rgb(random(255), random(255), random(255));
+}
+
+@mixin setBgrColor {
+  @for $i from 1 through 5 {
+    &:nth-child(#{$i}) {
+      a {
+        @include random-bgr();
+      }
+    }
+  }
+}

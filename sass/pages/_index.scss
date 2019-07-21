@@ -24,6 +24,7 @@ body {
       margin: 1rem auto;
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
       transition: all 0.3s linear;
+      @include setBgrColor;
 
       &:hover {
         transform: translateY(5px);
@@ -35,11 +36,11 @@ body {
       &:visited {
         text-decoration: none;
         text-transform: uppercase;
-        color: $color-primary;
+        color: $color-black;
         padding: 1rem;
         font-size: 2.5rem;
         background-color: rgba($color-secondary, 0.8);
-        font-weight: 700;
+        font-weight: 400;
         transition: all 0.3s ease-in-out;
         min-width: 400px;
 
@@ -51,6 +52,7 @@ body {
           background-color: transparent;
           color: rgba($color-secondary, 0.8);
           letter-spacing: 0.4rem;
+          font-weight: 900;
         }
       }
     }

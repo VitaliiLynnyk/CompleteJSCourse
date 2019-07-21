@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+        href="../css/style.css">
+  <title>Js courses</title>
+</head>
+
+<body>
+  <main class="main">
+    <h1 class="heading-secondary">
+      Coding chellange 5
+    </h1>
+    <section class="section">
+      <div class="section__task">
+        <h2 class="heading-primary--sub">
+          Task
+        </h2>
+        <p class="paragraph">
+          tip tipCalculator V2.0
+          John and his family went to 5 different restaurants.
+          The bills were $124, $48, $268, $180, and $42.
+          John likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50, and $200,
+          and 10% if the bill is more than $200.
+          Implement a tip calculator using objects and loops:
+          </br>1. Create an object with an array for the bill values
+          </br>2. add a method to calculate the tips.
+          </br>3. this method should include a loop to iterate over all the paid bills and do the tip calculations
+          </br>4. As an output, create (1) a new array containing all tips, and (2) an array containing final paid
+          amounts
+          (bill + tip). HINT: start with 2 empty arrays as PROPERTIESand then fill them up in the loop.
+        </p>
+      </div>
+      <div class="section__code">
+        <h2 class="heading-primary--sub">
+          Code
+        </h2>
+        <pre class="prettyprint">
+          const check = {
+            'bills': [
+              124, 48, 268, 180, 42
+            ],
+            calcTips: function () {
+              this.tipAmounts = [];
+              this.finalAmounts = [];
+              for (let i = 0; i < this.bills.length; i++) {
+                let percentage;
+                let bill = this.bills[i];
+                if (bill < 50) {
+                  percentage = 0.2;
+                } else if (50 <= bill <= 200) {
+                  percentage = 0.15;
+                } else {
+                  percentage = 0.1;
+                }
+                this.tipAmounts[i] = bill * percentage;
+                this.finalAmounts[i] = bill + (bill * percentage);
+              }
+            }
+          }
+        </pre>
+      </div>
+    </section>
+  </main>
+  <footer class="footer u-margin-top-medium">
+    <section class="footer__section">
+      <ul>
+        <li>get in touch &rarr;</li>
+        <li>
+          <a href="https://twitter.com/qu1etRain">
+            <img class="icon"
+                 src="https://image.flaticon.com/icons/svg/59/59046.svg">
+          </a>
+        </li>
+        <li>
+          <a href="https://codepen.io/VitaliiLynnyk">
+            <img class="icon"
+                 src="http://cdn.onlinewebfonts.com/svg/img_336066.png">
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/VitaliiLynnyk">
+            <img class="icon"
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Feather-logos-github.svg/1024px-Feather-logos-github.svg.png">
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/vitalii.lynnyk/">
+            <img class="icon"
+                 src="https://cdn2.iconfinder.com/data/icons/social-networks-18/100/Instagram_logo-512.png">
+          </a>
+        </li>
+      </ul>
+    </section>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+
+</html>

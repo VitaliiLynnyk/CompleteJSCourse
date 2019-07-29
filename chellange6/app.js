@@ -17,8 +17,12 @@ let currentScore = 0;
 let currentPlayer = false;   // 0 - first player 1 - second
 let currentPanel = document.querySelector(".player-0-panel");
 
-holdBtn.addEventListener('click', changeCurrentPlayer);
+newGameBtn.addEventListener('click', () => {
+  resetPlayerScore();
+  resetCurrentScore();
+});
 rollDiceBtn.addEventListener('click', rollDice);
+holdBtn.addEventListener('click', changeCurrentPlayer);
 
 resetPlayerScore();
 resetCurrentScore();

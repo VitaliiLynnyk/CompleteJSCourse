@@ -8,19 +8,20 @@ GAME RULES:
 - The first player to reach 100 points on GLOBAL score wins the game
 
 */
+const rollDiceBtn = document.querySelector(".btn-roll");
+const newGameBtn = document.querySelector(".btn-new");
+const holdBtn = document.querySelector(".btn-hold");
 
 let scores = [0, 0];
 let currentScore = 0;
 let currentPlayer = false;   // 0 - first player 1 - second
 let currentPanel = document.querySelector(".player-0-panel");
 
-const rollDiceBtn = document.querySelector(".btn-roll");
-const newGameBtn = document.querySelector(".btn-new");
-const holdBtn = document.querySelector(".btn-hold");
-
-
 holdBtn.addEventListener('click', changeCurrentPlayer);
 rollDiceBtn.addEventListener('click', rollDice);
+
+resetPlayerScore();
+resetCurrentScore();
 
 function resetPlayerScore() {
   scores = [0, 0];
@@ -32,14 +33,11 @@ function resetCurrentScore() {
   document.querySelectorAll(".player-current-score").forEach(e => e.innerText = 0);
 }
 
-resetPlayerScore();
-resetCurrentScore();
-
 function rollDice() {
   const randomValue = Math.round(Math.random() * 6 + 1);
 
   if (randomValue === 1) {
-    currentScore = 0;
+    resetCurrentScore();
     changeCurrentPlayer();
   } else {
     currentScore += randomValue;
@@ -47,14 +45,27 @@ function rollDice() {
   }
 }
 
+function checkWon(currentScore) {
+  if (currentScore >= 100) {
+    const name = currentPanel.querySelector(".player-name");
+    alert(`Player ${name.innerText} is win with score ${currentScore}`);
+    resetPlayerScore();
+    resetCurrentScore();
+  }
+}
+
+function increaseScore(personId, value) {
+  scores[personId] += value;
+  return scores[personId];
+}
+
 function changeCurrentPlayer() {
   const firstPanel = document.querySelector(".player-0-panel");
   const secondPanel = document.querySelector(".player-1-panel");
 
-  scores[+currentPlayer] += currentScore;
-  currentScore = 0;
-  currentPanel.querySelector(".player-current-score").innerText = 0;
-  currentPanel.querySelector(".player-score").innerText = scores[+currentPlayer];
+  currentPanel.querySelector(".player-score").innerText = increaseScore(+currentPlayer, currentScore);
+  checkWon(scores[+currentPlayer]);
+  resetCurrentScore();
 
   currentPlayer = !currentPlayer;
 
@@ -67,6 +78,4 @@ function changeCurrentPlayer() {
     secondPanel.classList.remove("active");
     currentPanel = firstPanel;
   }
-
-
 }

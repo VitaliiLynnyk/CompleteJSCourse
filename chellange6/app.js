@@ -40,6 +40,8 @@ function resetCurrentScore() {
 function rollDice() {
   const randomValue = Math.round(Math.random() * 6 + 1);
 
+  document.querySelector(".dice").src = `dice-${randomValue}.png`;
+
   if (randomValue === 1) {
     resetCurrentScore();
     changeCurrentPlayer();

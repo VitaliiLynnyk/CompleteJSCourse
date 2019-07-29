@@ -38,8 +38,8 @@ function resetCurrentScore() {
 }
 
 function rollDice() {
-  const randomValue = Math.round(Math.random() * 6 + 1) || 1;
-
+  const randomValue = Math.floor((Math.random() * 6) + 1);
+  console.log(randomValue);
   document.querySelector(".dice").src = `dice-${randomValue}.png`;
 
   if (randomValue === 1) {

@@ -48,7 +48,7 @@ function rollDice() {
 function checkWon(currentScore) {
   if (currentScore >= 100) {
     const name = currentPanel.querySelector(".player-name");
-    alert(`Player ${name.innerText} is win with score ${currentScore}`);
+    alert(`Player ${name.innerText} won with score ${currentScore}`);
     resetPlayerScore();
     resetCurrentScore();
   }

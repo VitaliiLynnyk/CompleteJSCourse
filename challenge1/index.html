@@ -13,7 +13,7 @@
 <body>
   <main class="main">
     <h1 class="heading-secondary">
-      Coding chellange 5
+      Coding challenge 1
     </h1>
     <section class="section">
       <div class="section__task">
@@ -21,18 +21,14 @@
           Task
         </h2>
         <p class="paragraph">
-          tip tipCalculator V2.0
-          John and his family went to 5 different restaurants.
-          The bills were $124, $48, $268, $180, and $42.
-          John likes to tip 20% of the bill when the bill is less than $50, 15% when the bill is between $50, and $200,
-          and 10% if the bill is more than $200.
-          Implement a tip calculator using objects and loops:
-          </br>1. Create an object with an array for the bill values
-          </br>2. add a method to calculate the tips.
-          </br>3. this method should include a loop to iterate over all the paid bills and do the tip calculations
-          </br>4. As an output, create (1) a new array containing all tips, and (2) an array containing final paid
-          amounts
-          (bill + tip). HINT: start with 2 empty arrays as PROPERTIESand then fill them up in the loop.
+          BMI: mass / height^2 = mass / (height * height)
+          </br>1.store mark and john's mass and height in variables.
+          </br>2.calculate both their bmis.
+          </br>3.create a boolean variable containing information about whether Mark has a higher BMI than John
+          </br>4.Print a string to the console containing the variable from Step 3. (Something like "Is Mark's BMI
+          higher
+          than
+          John's? true").
         </p>
       </div>
       <div class="section__code">
@@ -40,28 +36,28 @@
           Code
         </h2>
         <pre class="prettyprint">
-          const check = {
-            'bills': [
-              124, 48, 268, 180, 42
-            ],
-            calcTips: function () {
-              this.tipAmounts = [];
-              this.finalAmounts = [];
-              for (let i = 0; i < this.bills.length; i++) {
-                let percentage;
-                let bill = this.bills[i];
-                if (bill < 50) {
-                  percentage = 0.2;
-                } else if (50 <= bill <= 200) {
-                  percentage = 0.15;
-                } else {
-                  percentage = 0.1;
-                }
-                this.tipAmounts[i] = bill * percentage;
-                this.finalAmounts[i] = bill + (bill * percentage);
-              }
-            }
-          }
+        const mark = {
+          mass: "50kg",
+          height: "37cm"
+        };
+        
+        const john = {
+          mass: "100kg",
+          height: "195cm"
+        };
+
+        const calcBmi = person => {
+          const mass = parseInt(person.mass.slice(0, person.mass.length - 2));
+          const height = parseInt(person.height.slice(0, person.height.length - 2));
+          return mass / (height * height);
+        }
+
+        const markBMI = calcBmi(mark);
+        const johnBMI = calcBmi(john);
+        const res = markBMI > johnBMI
+                    ? `Mark has ${markBMI} grater BMI then John ${johnBMI}`
+                    : `John ${johnBMI} has grater BMI then Mark ${markBMI}`;
+        console.log(res);
         </pre>
       </div>
     </section>

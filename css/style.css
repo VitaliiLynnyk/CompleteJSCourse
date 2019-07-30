@@ -166,25 +166,25 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear; }
       body .main__item:nth-child(1) {
-        animation: moveInRight 0.6s 1; }
-        body .main__item:nth-child(1) a {
-          background-color: #6256b0; }
-      body .main__item:nth-child(2) {
-        animation: moveInRight 0.1s 1; }
-        body .main__item:nth-child(2) a {
-          background-color: #3228c5; }
-      body .main__item:nth-child(3) {
         animation: moveInRight 0.7s 1; }
-        body .main__item:nth-child(3) a {
-          background-color: #29bcdd; }
-      body .main__item:nth-child(4) {
-        animation: moveInRight 0.6s 1; }
-        body .main__item:nth-child(4) a {
-          background-color: #28c7b9; }
-      body .main__item:nth-child(5) {
+        body .main__item:nth-child(1) a {
+          background-color: #16e1ea; }
+      body .main__item:nth-child(2) {
+        animation: moveInRight 0.2s 1; }
+        body .main__item:nth-child(2) a {
+          background-color: #3ea367; }
+      body .main__item:nth-child(3) {
         animation: moveInRight 1s 1; }
+        body .main__item:nth-child(3) a {
+          background-color: #f43138; }
+      body .main__item:nth-child(4) {
+        animation: moveInRight 0.5s 1; }
+        body .main__item:nth-child(4) a {
+          background-color: #14d237; }
+      body .main__item:nth-child(5) {
+        animation: moveInRight 0.3s 1; }
         body .main__item:nth-child(5) a {
-          background-color: #998f6e; }
+          background-color: #ce3fe9; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);
@@ -226,3 +226,72 @@ body {
     text-align: center;
     text-shadow: 1px 1px 1px #333, 3px 3px 5px #04fc04;
     animation: moveInBottom 0.5s 1; }
+
+.challenge-6 {
+  display: flex;
+  position: relative; }
+  .challenge-6 .player-0-panel,
+  .challenge-6 .player-1-panel {
+    flex: 50%;
+    background-color: rgba(120, 194, 254, 0.2); }
+  .challenge-6 .active {
+    background-color: rgba(120, 194, 254, 0.6); }
+  .challenge-6 button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s; }
+  .challenge-6 .player-name {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative; }
+  .challenge-6 .player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #eb4d4d;
+    margin-bottom: 130px; }
+  .challenge-6 .active .player-name::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #eb4d4d;
+    top: -7px; }
+  .challenge-6 .btn-new {
+    top: 45px; }
+  .challenge-6 .btn-roll {
+    top: 380px; }
+  .challenge-6 .btn-hold {
+    top: 420px; }
+  .challenge-6 .dice {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1); }
+  .challenge-6 .player-current-box {
+    background-color: #eb4d4d;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center; }
+  .challenge-6 .player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222; }

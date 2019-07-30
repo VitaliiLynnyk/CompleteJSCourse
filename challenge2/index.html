@@ -2,42 +2,44 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet"
-        href="../css/style.css">
-  <title>Js courses</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="../css/style.css">
+    <title>Js courses</title>
 </head>
 
 <body>
-  <main class="main">
+<main class="main">
     <h1 class="heading-secondary">
-      Coding challenge 2
+        Coding challenge 2
     </h1>
     <section class="section">
-      <div class="section__task">
-        <h2 class="heading-primary--sub">
-          Task
-        </h2>
-        <p class="paragraph">
-          John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89,
-          120 and 103 points, while Mike's team scored 116, 94, and 123 points.
-          </br>1. Calculate the average score for each team.
-          </br>2. Decide which teams wins in average (highest average score), and print the winner to the console.
-          Also include the average score in the output.
-          </br>3. Then change the scores to show different winners.
-          Don't forget to take into acount there might be a draw (the same average score).
-          </br>4. EXTRA: Mary also plays basketball, and her team scored 97, 134, and 105 points. Like before, log the
-          average winner to the console. HINT: you will need the && operator to take the decision.
-          </br>5. Like before, change the scores to generate different winners, keeping in mind there might be draws.
-        </p>
-      </div>
-      <div class="section__code">
-        <h2 class="heading-primary--sub">
-          Code
-        </h2>
-        <pre class="prettyprint">
+        <div class="section__task">
+            <h2 class="heading-primary--sub">
+                Task
+            </h2>
+            <p class="paragraph">
+                John and Mike both play basketball in different teams. In the latest 3 games, John's team scored 89,
+                120 and 103 points, while Mike's team scored 116, 94, and 123 points.
+                </br>1. Calculate the average score for each team.
+                </br>2. Decide which teams wins in average (highest average score), and print the winner to the console.
+                Also include the average score in the output.
+                </br>3. Then change the scores to show different winners.
+                Don't forget to take into acount there might be a draw (the same average score).
+                </br>4. EXTRA: Mary also plays basketball, and her team scored 97, 134, and 105 points. Like before, log
+                the
+                average winner to the console. HINT: you will need the && operator to take the decision.
+                </br>5. Like before, change the scores to generate different winners, keeping in mind there might be
+                draws.
+            </p>
+        </div>
+        <div class="section__code">
+            <h2 class="heading-primary--sub">
+                Code
+            </h2>
+            <pre class="prettyprint">
         const johnTeam = createRandomArr(3, 200);
         const mikeTeam = createRandomArr(3, 200);
         const maryTeam = createRandomArr(3, 200);
@@ -65,41 +67,41 @@
                   .map(() => Math.round(Math.random() * max));
         }
         </pre>
-      </div>
+        </div>
     </section>
-  </main>
-  <footer class="footer u-margin-top-medium">
+</main>
+<footer class="footer u-margin-top-medium">
     <section class="footer__section">
-      <ul>
-        <li>get in touch &rarr;</li>
-        <li>
-          <a href="https://twitter.com/qu1etRain">
-            <img class="icon"
-                 src="https://image.flaticon.com/icons/svg/59/59046.svg">
-          </a>
-        </li>
-        <li>
-          <a href="https://codepen.io/VitaliiLynnyk">
-            <img class="icon"
-                 src="http://cdn.onlinewebfonts.com/svg/img_336066.png">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/VitaliiLynnyk">
-            <img class="icon"
-                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Feather-logos-github.svg/1024px-Feather-logos-github.svg.png">
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/vitalii.lynnyk/">
-            <img class="icon"
-                 src="https://cdn2.iconfinder.com/data/icons/social-networks-18/100/Instagram_logo-512.png">
-          </a>
-        </li>
-      </ul>
+        <ul>
+            <li>get in touch &rarr;</li>
+            <li>
+                <a href="https://twitter.com/qu1etRain">
+                    <img class="icon"
+                         src="https://image.flaticon.com/icons/svg/59/59046.svg">
+                </a>
+            </li>
+            <li>
+                <a href="https://codepen.io/VitaliiLynnyk">
+                    <img class="icon"
+                         src="http://cdn.onlinewebfonts.com/svg/img_336066.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/VitaliiLynnyk">
+                    <img class="icon"
+                         src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Feather-logos-github.svg/1024px-Feather-logos-github.svg.png">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/vitalii.lynnyk/">
+                    <img class="icon"
+                         src="https://cdn2.iconfinder.com/data/icons/social-networks-18/100/Instagram_logo-512.png">
+                </a>
+            </li>
+        </ul>
     </section>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</footer>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 
 </html>

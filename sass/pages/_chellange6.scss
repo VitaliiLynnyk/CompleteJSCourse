@@ -1,12 +1,21 @@
 .challenge-6 {
   display: flex;
   position: relative;
+  @include box-shadow(0, 4px, 10px, $color-primary, false);
+
+  > * {
+    text-transform: uppercase;
+  }
+
+  .icon {
+    margin-right: 5px;
+    width: 15px;
+  }
 
   .player-0-panel,
   .player-1-panel {
     flex: 50%;
     background-color: rgba($color-primary-light, .2);
-    text-transform: uppercase;
 
     .player-name {
       font-size: 40px;
@@ -23,23 +32,37 @@
       text-align: center;
       font-size: 80px;
       font-weight: 100;
-      color: #eb4d4d;
+      color: $color-primary-light;
+      text-shadow: 0 0 5px #333,
+      0 0 10px #333,
+      0 0 15px #333,
+      0 0 20px $color-primary-light,
+      0 0 30px $color-primary-light,
+      0 0 40px $color-primary-light,
+      0 0 55px $color-primary-light,
+      0 0 75px $color-primary-light;
       margin-bottom: 130px;
     }
 
     .player-current-box {
-      background-color: #eb4d4d;
-      color: #fff;
+      background-color: #FCD4E4;
+      color: $color-black;
       width: 40%;
       margin: 0 auto;
       padding: 12px;
+      font-size: $default-font-size;
       text-align: center;
+      @include box-shadow(0, 1px, 20px, $color-primary-light, true);
     }
 
     .player-current-label {
       margin-bottom: 10px;
-      font-size: 12px;
+      font-size: 20px;
       color: #222;
+
+      @media screen and (max-width: 800px) {
+        font-size: 15px;
+      }
     }
   }
 
@@ -47,11 +70,13 @@
     background-color: rgba($color-primary-light, .6);
 
     .player-name {
+      font-weight: 700;
+
       &::after {
         content: "\2022";
         font-size: 47px;
         position: absolute;
-        color: #eb4d4d;
+        color: $color-danger;
         top: -7px;
       }
     }
@@ -62,15 +87,28 @@
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: $color-green;
+    color: $color-black;
     background: none;
     border: none;
     font-size: 20px;
-    text-transform: uppercase;
     cursor: pointer;
     font-weight: 300;
-    transition: background-color 0.3s, color 0.3s;
+    transition: all 0.3s;
+
+    &:hover,
+    &:active {
+      transform: translate(-50%, 2px);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @media screen and (max-width: 800px) {
+      font-size: 15px;
+    }
   }
+
 
   .btn-new {
     top: 85px;
@@ -90,6 +128,6 @@
     top: 208px;
     transform: translateX(-50%);
     height: 100px;
-    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
+    box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, .36);
   }
 }

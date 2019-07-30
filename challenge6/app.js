@@ -18,8 +18,8 @@ let currentPlayer = false;   // 0 - first player 1 - second
 let currentPanel = document.querySelector(".player-0-panel");
 
 newGameBtn.addEventListener('click', () => {
-  resetPlayerScore();
-  resetCurrentScore();
+    resetPlayerScore();
+    resetCurrentScore();
 });
 rollDiceBtn.addEventListener('click', rollDice);
 holdBtn.addEventListener('click', changeCurrentPlayer);
@@ -28,60 +28,67 @@ resetPlayerScore();
 resetCurrentScore();
 
 function resetPlayerScore() {
-  scores = [0, 0];
-  document.querySelectorAll(".player-score").forEach(e => e.innerText = 0);
+    scores = [0, 0];
+    document.querySelectorAll(".player-score").forEach(e => e.innerText = 0);
 }
 
 function resetCurrentScore() {
-  currentScore = 0;
-  document.querySelectorAll(".player-current-score").forEach(e => e.innerText = 0);
+    currentScore = 0;
+    document.querySelectorAll(".player-current-score").forEach(e => e.innerText = 0);
 }
 
 function rollDice() {
-  const randomValue = Math.floor((Math.random() * 6) + 1);
-  console.log(randomValue);
-  document.querySelector(".dice").src = `dice-${randomValue}.png`;
+    const randomValue = Math.floor((Math.random() * 6) + 1);
+    const dice = document.querySelector(".dice");
+    dice.src = `dice-${ randomValue }.png`;
+    dice.animate([
+        { transform: 'rotate(0)' },
+        { transform: 'rotate(360deg)' }
+    ], {
+        duration: 500,
+        iterations: 1
+    });
 
-  if (randomValue === 1) {
-    resetCurrentScore();
-    changeCurrentPlayer();
-  } else {
-    currentScore += randomValue;
-    currentPanel.querySelector(".player-current-score").innerText = currentScore;
-  }
+    if (randomValue === 1) {
+        resetCurrentScore();
+        changeCurrentPlayer();
+    } else {
+        currentScore += randomValue;
+        currentPanel.querySelector(".player-current-score").innerText = currentScore;
+    }
 }
 
 function checkWon(currentScore) {
-  if (currentScore >= 100) {
-    const name = currentPanel.querySelector(".player-name");
-    alert(`Player ${name.innerText} won with score ${currentScore}`);
-    resetPlayerScore();
-    resetCurrentScore();
-  }
+    if (currentScore >= 100) {
+        const name = currentPanel.querySelector(".player-name");
+        alert(`Player ${ name.innerText } won with score ${ currentScore }`);
+        resetPlayerScore();
+        resetCurrentScore();
+    }
 }
 
 function increaseScore(personId, value) {
-  scores[personId] += value;
-  return scores[personId];
+    scores[personId] += value;
+    return scores[personId];
 }
 
 function changeCurrentPlayer() {
-  const firstPanel = document.querySelector(".player-0-panel");
-  const secondPanel = document.querySelector(".player-1-panel");
+    const firstPanel = document.querySelector(".player-0-panel");
+    const secondPanel = document.querySelector(".player-1-panel");
 
-  currentPanel.querySelector(".player-score").innerText = increaseScore(+currentPlayer, currentScore);
-  checkWon(scores[+currentPlayer]);
-  resetCurrentScore();
+    currentPanel.querySelector(".player-score").innerText = increaseScore(+currentPlayer, currentScore);
+    checkWon(scores[+currentPlayer]);
+    resetCurrentScore();
 
-  currentPlayer = !currentPlayer;
+    currentPlayer = !currentPlayer;
 
-  if (currentPlayer) {
-    firstPanel.classList.remove("active");
-    secondPanel.classList.add("active");
-    currentPanel = secondPanel;
-  } else {
-    firstPanel.classList.add("active");
-    secondPanel.classList.remove("active");
-    currentPanel = firstPanel;
-  }
+    if (currentPlayer) {
+        firstPanel.classList.remove("active");
+        secondPanel.classList.add("active");
+        currentPanel = secondPanel;
+    } else {
+        firstPanel.classList.add("active");
+        secondPanel.classList.remove("active");
+        currentPanel = firstPanel;
+    }
 }

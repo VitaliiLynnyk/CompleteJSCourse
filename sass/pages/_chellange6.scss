@@ -6,6 +6,41 @@
   .player-1-panel {
     flex: 50%;
     background-color: rgba($color-primary-light, .2);
+    text-transform: uppercase;
+
+    .player-name {
+      font-size: 40px;
+      text-align: center;
+
+      letter-spacing: 2px;
+      font-weight: 100;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .player-score {
+      text-align: center;
+      font-size: 80px;
+      font-weight: 100;
+      color: #eb4d4d;
+      margin-bottom: 130px;
+    }
+
+    .player-current-box {
+      background-color: #eb4d4d;
+      color: #fff;
+      width: 40%;
+      margin: 0 auto;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .player-current-label {
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #222;
+    }
   }
 
   .active {
@@ -27,7 +62,7 @@
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: #555;
+    color: $color-green;
     background: none;
     border: none;
     font-size: 20px;
@@ -35,25 +70,6 @@
     cursor: pointer;
     font-weight: 300;
     transition: background-color 0.3s, color 0.3s;
-  }
-
-  .player-name {
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    position: relative;
-  }
-
-  .player-score {
-    text-align: center;
-    font-size: 80px;
-    font-weight: 100;
-    color: #eb4d4d;
-    margin-bottom: 130px;
   }
 
   .btn-new {
@@ -75,21 +91,5 @@
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1);
-  }
-
-  .player-current-box {
-    background-color: #eb4d4d;
-    color: #fff;
-    width: 40%;
-    margin: 0 auto;
-    padding: 12px;
-    text-align: center;
-  }
-
-  .player-current-label {
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #222;
   }
 }

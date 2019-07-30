@@ -166,25 +166,25 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear; }
       body .main__item:nth-child(1) {
-        animation: moveInRight 0.4s 1; }
+        animation: moveInRight 0.5s 1; }
         body .main__item:nth-child(1) a {
-          background-color: #43a87e; }
+          background-color: #cef430; }
       body .main__item:nth-child(2) {
-        animation: moveInRight 0.7s 1; }
+        animation: moveInRight 1s 1; }
         body .main__item:nth-child(2) a {
-          background-color: #632fbc; }
+          background-color: #8425ae; }
       body .main__item:nth-child(3) {
-        animation: moveInRight 0.4s 1; }
+        animation: moveInRight 0.8s 1; }
         body .main__item:nth-child(3) a {
-          background-color: #5c50c7; }
+          background-color: #e9c795; }
       body .main__item:nth-child(4) {
-        animation: moveInRight 0.7s 1; }
+        animation: moveInRight 0.6s 1; }
         body .main__item:nth-child(4) a {
-          background-color: #c18c2d; }
+          background-color: #248e1f; }
       body .main__item:nth-child(5) {
-        animation: moveInRight 0.9s 1; }
+        animation: moveInRight 0.5s 1; }
         body .main__item:nth-child(5) a {
-          background-color: #e10192; }
+          background-color: #41c378; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);
@@ -233,7 +233,37 @@ body {
   .challenge-6 .player-0-panel,
   .challenge-6 .player-1-panel {
     flex: 50%;
-    background-color: rgba(120, 194, 254, 0.2); }
+    background-color: rgba(120, 194, 254, 0.2);
+    text-transform: uppercase; }
+    .challenge-6 .player-0-panel .player-name,
+    .challenge-6 .player-1-panel .player-name {
+      font-size: 40px;
+      text-align: center;
+      letter-spacing: 2px;
+      font-weight: 100;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      position: relative; }
+    .challenge-6 .player-0-panel .player-score,
+    .challenge-6 .player-1-panel .player-score {
+      text-align: center;
+      font-size: 80px;
+      font-weight: 100;
+      color: #eb4d4d;
+      margin-bottom: 130px; }
+    .challenge-6 .player-0-panel .player-current-box,
+    .challenge-6 .player-1-panel .player-current-box {
+      background-color: #eb4d4d;
+      color: #fff;
+      width: 40%;
+      margin: 0 auto;
+      padding: 12px;
+      text-align: center; }
+    .challenge-6 .player-0-panel .player-current-label,
+    .challenge-6 .player-1-panel .player-current-label {
+      margin-bottom: 10px;
+      font-size: 12px;
+      color: #222; }
   .challenge-6 .active {
     background-color: rgba(120, 194, 254, 0.6); }
     .challenge-6 .active .player-name::after {
@@ -247,7 +277,7 @@ body {
     width: 200px;
     left: 50%;
     transform: translateX(-50%);
-    color: #555;
+    color: #04fc04;
     background: none;
     border: none;
     font-size: 20px;
@@ -255,21 +285,6 @@ body {
     cursor: pointer;
     font-weight: 300;
     transition: background-color 0.3s, color 0.3s; }
-  .challenge-6 .player-name {
-    font-size: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 100;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    position: relative; }
-  .challenge-6 .player-score {
-    text-align: center;
-    font-size: 80px;
-    font-weight: 100;
-    color: #eb4d4d;
-    margin-bottom: 130px; }
   .challenge-6 .btn-new {
     top: 85px; }
   .challenge-6 .btn-roll {
@@ -283,15 +298,3 @@ body {
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1); }
-  .challenge-6 .player-current-box {
-    background-color: #eb4d4d;
-    color: #fff;
-    width: 40%;
-    margin: 0 auto;
-    padding: 12px;
-    text-align: center; }
-  .challenge-6 .player-current-label {
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #222; }

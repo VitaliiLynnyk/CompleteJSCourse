@@ -166,25 +166,25 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear; }
       body .main__item:nth-child(1) {
-        animation: moveInRight 0.7s 1; }
+        animation: moveInRight 0.4s 1; }
         body .main__item:nth-child(1) a {
-          background-color: #16e1ea; }
+          background-color: #43a87e; }
       body .main__item:nth-child(2) {
-        animation: moveInRight 0.2s 1; }
+        animation: moveInRight 0.7s 1; }
         body .main__item:nth-child(2) a {
-          background-color: #3ea367; }
+          background-color: #632fbc; }
       body .main__item:nth-child(3) {
-        animation: moveInRight 1s 1; }
+        animation: moveInRight 0.4s 1; }
         body .main__item:nth-child(3) a {
-          background-color: #f43138; }
+          background-color: #5c50c7; }
       body .main__item:nth-child(4) {
-        animation: moveInRight 0.5s 1; }
+        animation: moveInRight 0.7s 1; }
         body .main__item:nth-child(4) a {
-          background-color: #14d237; }
+          background-color: #c18c2d; }
       body .main__item:nth-child(5) {
-        animation: moveInRight 0.3s 1; }
+        animation: moveInRight 0.9s 1; }
         body .main__item:nth-child(5) a {
-          background-color: #ce3fe9; }
+          background-color: #e10192; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);
@@ -236,6 +236,12 @@ body {
     background-color: rgba(120, 194, 254, 0.2); }
   .challenge-6 .active {
     background-color: rgba(120, 194, 254, 0.6); }
+    .challenge-6 .active .player-name::after {
+      content: "\2022";
+      font-size: 47px;
+      position: absolute;
+      color: #eb4d4d;
+      top: -7px; }
   .challenge-6 button {
     position: absolute;
     width: 200px;
@@ -264,14 +270,8 @@ body {
     font-weight: 100;
     color: #eb4d4d;
     margin-bottom: 130px; }
-  .challenge-6 .active .player-name::after {
-    content: "\2022";
-    font-size: 47px;
-    position: absolute;
-    color: #eb4d4d;
-    top: -7px; }
   .challenge-6 .btn-new {
-    top: 45px; }
+    top: 85px; }
   .challenge-6 .btn-roll {
     top: 380px; }
   .challenge-6 .btn-hold {
@@ -279,7 +279,7 @@ body {
   .challenge-6 .dice {
     position: absolute;
     left: 50%;
-    top: 178px;
+    top: 208px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.1); }

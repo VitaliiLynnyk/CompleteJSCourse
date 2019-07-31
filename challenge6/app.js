@@ -42,8 +42,8 @@ function rollDice() {
     const dice = document.querySelector(".dice");
     dice.src = `dice-${ randomValue }.png`;
     dice.animate([
-        { transform: 'rotate(0)' },
-        { transform: 'rotate(360deg)' }
+        { transform: 'translateX(-50%) rotate(0)' },
+        { transform: 'translateX(-50%) rotate(360deg)' }
     ], {
         duration: 500,
         iterations: 1

@@ -76,6 +76,13 @@
         top: -7px;
       }
     }
+
+    .player-score {
+      text-shadow: 0 0 5px $color-danger, 0 0 10px $color-danger, 0 0 15px $color-danger,
+      0 0 20px $color-primary-light, 0 0 30px $color-primary-light,
+      0 0 40px $color-primary-light, 0 0 55px $color-primary-light,
+      0 0 75px $color-primary-light;
+    }
   }
 
   button {

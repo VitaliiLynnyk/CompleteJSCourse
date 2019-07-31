@@ -166,25 +166,25 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear; }
       body .main__item:nth-child(1) {
-        animation: moveInRight 0.4s 1; }
+        animation: moveInRight 0.1s 1; }
         body .main__item:nth-child(1) a {
-          background-color: #16b04a; }
+          background-color: #5b6d51; }
       body .main__item:nth-child(2) {
-        animation: moveInRight 0.8s 1; }
+        animation: moveInRight 0.1s 1; }
         body .main__item:nth-child(2) a {
-          background-color: #f3b2e1; }
+          background-color: #0f1652; }
       body .main__item:nth-child(3) {
         animation: moveInRight 0.7s 1; }
         body .main__item:nth-child(3) a {
-          background-color: #c9c96c; }
+          background-color: #40f34d; }
       body .main__item:nth-child(4) {
-        animation: moveInRight 0.2s 1; }
+        animation: moveInRight 0.6s 1; }
         body .main__item:nth-child(4) a {
-          background-color: #a0b819; }
+          background-color: #8cdafb; }
       body .main__item:nth-child(5) {
-        animation: moveInRight 0.7s 1; }
+        animation: moveInRight 0.9s 1; }
         body .main__item:nth-child(5) a {
-          background-color: #d417df; }
+          background-color: #6f017e; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);
@@ -261,7 +261,7 @@ body {
       margin-bottom: 130px; }
     .challenge-6 .player-0-panel .player-current-box,
     .challenge-6 .player-1-panel .player-current-box {
-      background-color: #FCD4E4;
+      background-color: #fcd4e4;
       color: #000;
       width: 40%;
       margin: 0 auto;
@@ -290,6 +290,8 @@ body {
         position: absolute;
         color: #ff1500;
         top: -7px; }
+    .challenge-6 .active .player-score {
+      text-shadow: 0 0 5px #ff1500, 0 0 10px #ff1500, 0 0 15px #ff1500, 0 0 20px #78c2fe, 0 0 30px #78c2fe, 0 0 40px #78c2fe, 0 0 55px #78c2fe, 0 0 75px #78c2fe; }
   .challenge-6 button {
     position: absolute;
     width: 200px;

@@ -15,7 +15,7 @@
   .player-0-panel,
   .player-1-panel {
     flex: 50%;
-    background-color: rgba($color-primary-light, .2);
+    background-color: rgba($color-primary-light, 0.2);
 
     .player-name {
       font-size: 40px;
@@ -33,19 +33,15 @@
       font-size: 80px;
       font-weight: 100;
       color: $color-primary-light;
-      text-shadow: 0 0 5px #333,
-      0 0 10px #333,
-      0 0 15px #333,
-      0 0 20px $color-primary-light,
-      0 0 30px $color-primary-light,
-      0 0 40px $color-primary-light,
-      0 0 55px $color-primary-light,
-      0 0 75px $color-primary-light;
+      text-shadow: 0 0 5px #333, 0 0 10px #333, 0 0 15px #333,
+        0 0 20px $color-primary-light, 0 0 30px $color-primary-light,
+        0 0 40px $color-primary-light, 0 0 55px $color-primary-light,
+        0 0 75px $color-primary-light;
       margin-bottom: 130px;
     }
 
     .player-current-box {
-      background-color: #FCD4E4;
+      background-color: #fcd4e4;
       color: $color-black;
       width: 40%;
       margin: 0 auto;
@@ -67,7 +63,7 @@
   }
 
   .active {
-    background-color: rgba($color-primary-light, .6);
+    background-color: rgba($color-primary-light, 0.6);
 
     .player-name {
       font-weight: 700;
@@ -109,7 +105,6 @@
     }
   }
 
-
   .btn-new {
     top: 85px;
   }
@@ -128,6 +123,6 @@
     top: 208px;
     transform: translateX(-50%);
     height: 100px;
-    box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, .36);
+    box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.36);
   }
 }

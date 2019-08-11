@@ -40,3 +40,27 @@ function deepCopy(obj) {
   }
   return out;
 }
+
+function quize(questions) {
+  let score = 0;
+  while (questions.length) {
+    let random = Math.floor(Math.random() * questions.length);
+    const question = questions.splice(random, 1);
+
+    console.log(question[0].question);
+    question[0].answers.forEach(element => {
+      console.log(element.answer);
+    });
+
+    const promptAnswer = prompt(question[0].question);
+    console.log("answer prompt  = " + promptAnswer);
+
+    if (question[0].answers[promptAnswer].correct) {
+      score++;
+    }
+  }
+
+  console.log(`score  = ${score}`);
+}
+
+quize(questionArray);

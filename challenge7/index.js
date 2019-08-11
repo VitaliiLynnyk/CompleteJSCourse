@@ -41,26 +41,42 @@ function deepCopy(obj) {
   return out;
 }
 
-function quize(questions) {
+function quize(array) {
+  let questions = deepCopy(array);
   let score = 0;
+
+  console.log(`\n\nStart Game`);
+  console.log(`Please enter correct values`);
+
   while (questions.length) {
+    let i = 0;
     let random = Math.floor(Math.random() * questions.length);
     const question = questions.splice(random, 1);
 
-    console.log(question[0].question);
-    question[0].answers.forEach(element => {
-      console.log(element.answer);
+    console.log(`\n${question[0].question}`);
+    question[0].answers.forEach(answer => {
+      console.log(`${i++} ${answer.answer}`);
     });
 
     const promptAnswer = prompt(question[0].question);
-    console.log("answer prompt  = " + promptAnswer);
+    
+    console.log("------------------------------------------");
 
-    if (question[0].answers[promptAnswer].correct) {
+    if (question[0].answers[promptAnswer] == null) {
+      console.log(`Please enter correct value`);
+      return;
+    } else if (question[0].answers[promptAnswer].correct) {
       score++;
+      console.log(`Yes, you are right 🥳  score = ${score}`);
+    } else {
+      console.log(`Sorry, try next 🤔 score = ${score}`);
     }
-  }
 
+    console.log("------------------------------------------");
+  }
+  console.log(`\n\nCongratulation`);
+  console.log(`🥳🥳🥳🥳🥳`);
   console.log(`score  = ${score}`);
 }
 
-quize(questionArray);
+document.querySelector(".main__item").addEventListener("click", ()=> quize(questionArray));

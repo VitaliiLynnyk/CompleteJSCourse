@@ -166,25 +166,25 @@ body {
       box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.56);
       transition: all 0.3s linear; }
       body .main__item:nth-child(1) {
-        animation: moveInRight 0.3s 1; }
+        animation: moveInRight 0.5s 1; }
         body .main__item:nth-child(1) a {
-          background-color: #477af8; }
+          background-color: #8a0e35; }
       body .main__item:nth-child(2) {
-        animation: moveInRight 0.3s 1; }
+        animation: moveInRight 0.7s 1; }
         body .main__item:nth-child(2) a {
-          background-color: #500789; }
+          background-color: #922d19; }
       body .main__item:nth-child(3) {
         animation: moveInRight 0.4s 1; }
         body .main__item:nth-child(3) a {
-          background-color: #bb3573; }
+          background-color: #fa1fc0; }
       body .main__item:nth-child(4) {
-        animation: moveInRight 0.5s 1; }
+        animation: moveInRight 0.6s 1; }
         body .main__item:nth-child(4) a {
-          background-color: #46e540; }
+          background-color: #07eff5; }
       body .main__item:nth-child(5) {
-        animation: moveInRight 1s 1; }
+        animation: moveInRight 0.7s 1; }
         body .main__item:nth-child(5) a {
-          background-color: #ae4bd6; }
+          background-color: #6173fd; }
       body .main__item:hover {
         box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.76);
         transform: translateY(5px) scale(1.1);
@@ -324,3 +324,212 @@ body {
     transform: translateX(-50%);
     height: 100px;
     box-shadow: -1px 1px 13px 5px rgba(0, 0, 0, 0.36); }
+
+.challenge-8 {
+  /**********************************************
+    *** TOP PART
+    **********************************************/
+  /**********************************************
+    *** BOTTOM PART
+    **********************************************/
+  /***** FORM *****/
+  /***** LISTS *****/ }
+  .challenge-8 .clearfix::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .challenge-8 body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400; }
+  .challenge-8 .right {
+    float: right; }
+  .challenge-8 .red {
+    color: #ff5049 !important; }
+  .challenge-8 .red-focus:focus {
+    border: 1px solid #ff5049 !important; }
+  .challenge-8 .top {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url(back.png);
+    background-size: cover;
+    background-position: center;
+    position: relative; }
+  .challenge-8 .budget {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff; }
+  .challenge-8 .budget__title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 300; }
+  .challenge-8 .budget__value {
+    font-weight: 300;
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 2px; }
+  .challenge-8 .budget__income,
+  .challenge-8 .budget__expenses {
+    padding: 12px;
+    text-transform: uppercase; }
+  .challenge-8 .budget__income {
+    margin-bottom: 10px;
+    background-color: #28b9b5; }
+  .challenge-8 .budget__expenses {
+    background-color: #ff5049; }
+  .challenge-8 .budget__income--text,
+  .challenge-8 .budget__expenses--text {
+    float: left;
+    font-size: 13px;
+    color: #444;
+    margin-top: 2px; }
+  .challenge-8 .budget__income--value,
+  .challenge-8 .budget__expenses--value {
+    letter-spacing: 1px;
+    float: left; }
+  .challenge-8 .budget__income--percentage,
+  .challenge-8 .budget__expenses--percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px; }
+  .challenge-8 .budget__expenses--percentage {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+    border-radius: 3px; }
+  .challenge-8 .add {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7; }
+  .challenge-8 .add__container {
+    margin: 0 auto;
+    text-align: center; }
+  .challenge-8 .add__type {
+    width: 55px;
+    border: 1px solid #e7e7e7;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    background-color: #fff;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s; }
+  .challenge-8 .add__description,
+  .challenge-8 .add__value {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: border 0.3s; }
+  .challenge-8 .add__description {
+    width: 400px; }
+  .challenge-8 .add__value {
+    width: 100px; }
+  .challenge-8 .add__btn {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: #28b9b5;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px; }
+  .challenge-8 .add__btn:active {
+    transform: translateY(2px); }
+  .challenge-8 .add__type:focus,
+  .challenge-8 .add__description:focus,
+  .challenge-8 .add__value:focus {
+    outline: none;
+    border: 1px solid #28b9b5; }
+  .challenge-8 .add__btn:focus {
+    outline: none; }
+  .challenge-8 .container {
+    width: 1000px;
+    margin: 60px auto; }
+  .challenge-8 .income {
+    float: left;
+    width: 475px;
+    margin-right: 50px; }
+  .challenge-8 .expenses {
+    float: left;
+    width: 475px; }
+  .challenge-8 h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px; }
+  .challenge-8 .icome__title {
+    color: #28b9b5; }
+  .challenge-8 .expenses__title {
+    color: #ff5049; }
+  .challenge-8 .item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7; }
+  .challenge-8 .item:first-child {
+    border-top: 1px solid #e7e7e7; }
+  .challenge-8 .item:nth-child(even) {
+    background-color: #f7f7f7; }
+  .challenge-8 .item__description {
+    float: left; }
+  .challenge-8 .item__value {
+    float: left;
+    transition: transform 0.3s; }
+  .challenge-8 .item__percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #ffdad9;
+    padding: 3px;
+    border-radius: 3px;
+    width: 32px;
+    text-align: center; }
+  .challenge-8 .income .item__value,
+  .challenge-8 .income .item__delete--btn {
+    color: #28b9b5; }
+  .challenge-8 .expenses .item__value,
+  .challenge-8 .expenses .item__percentage,
+  .challenge-8 .expenses .item__delete--btn {
+    color: #ff5049; }
+  .challenge-8 .item__delete {
+    float: left; }
+  .challenge-8 .item__delete--btn {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none; }
+  .challenge-8 .item__delete--btn:focus {
+    outline: none; }
+  .challenge-8 .item__delete--btn:active {
+    transform: translateY(2px); }
+  .challenge-8 .item:hover .item__delete--btn {
+    display: block; }
+  .challenge-8 .item:hover .item__value {
+    transform: translateX(-20px); }
+  .challenge-8 .item:hover .item__percentage {
+    transform: translateX(-20px); }
+  .challenge-8 .unpaid {
+    background-color: #ffdad9 !important;
+    cursor: pointer;
+    color: #ff5049; }
+  .challenge-8 .unpaid .item__percentage {
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1); }
+  .challenge-8 .unpaid:hover .item__description {
+    font-weight: 900; }

@@ -85,6 +85,16 @@ const UIController = (function () {
   };
 
   return {
+    displayMonth: function () {
+      let now, months, month, year;
+
+      now = new Date();
+      months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+      month = now.getMonth();
+
+      year = now.getFullYear();
+      document.querySelector(DOMstrings.dateLabel).textContent = months[month] + ' ' + year;
+    },
     getInput: function () {
       return {
         type: document.querySelector(DOMstrings.inputType).value,
@@ -167,6 +177,12 @@ const controller = (function (budgetCtrl, UICtrl) {
   return {
     init: function () {
       console.log('Application has started.');
+      UICtrl.displayMonth();
+      UICtrl.displayBudget({
+        budget: 0,
+        totalInc: 0,
+        totalExp: 0
+      });
       setupEventListeners();
     }
   };

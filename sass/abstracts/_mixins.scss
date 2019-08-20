@@ -22,7 +22,7 @@
 }
 
 @mixin setBgrColor {
-  @for $i from 1 through 5 {
+  @for $i from 1 through 10 {
     &:nth-child(#{$i}) {
       animation: moveInRight #{random(10) / 10}s 1;
       a {

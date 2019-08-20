@@ -59,7 +59,7 @@ function quize(array) {
     });
 
     const promptAnswer = prompt(question[0].question);
-    
+
     console.log("------------------------------------------");
 
     if (question[0].answers[promptAnswer] == null) {
@@ -79,4 +79,4 @@ function quize(array) {
   console.log(`score  = ${score}`);
 }
 
-document.querySelector(".main__item").addEventListener("click", ()=> quize(questionArray));
+document.querySelector(".main__item").addEventListener("click", () => quize(questionArray));

@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <title>Js courses</title>
-  </head>
-  <main class="main challenge-7">
-    <h1 class="heading-secondary">
-      Coding challenge 1
-    </h1>
-    <section class="section">
-      <div class="section__code">
-        <h2 class="heading-primary--sub">
-          Code Quize ( Open Console ) and Click on Button
-        </h2>
-        <button class="main__item" style="margin: 0 auto;">
-          <a class="main__link" href="#">
-            Run Quize
-          </a>
-        </button>
-        <pre class="prettyprint">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+        href="../css/style.css" />
+  <title>Js courses</title>
+</head>
+<main class="main challenge-7">
+  <h1 class="heading-secondary">
+    Coding challenge 7
+  </h1>
+  <section class="section">
+    <div class="section__code">
+      <h2 class="heading-primary--sub">
+        Code Quize ( Open Console ) and Click on Button
+      </h2>
+      <button class="main__item"
+              style="margin: 0 auto;">
+        <a class="main__link"
+           href="#">
+          Run Quize
+        </a>
+      </button>
+      <pre class="prettyprint">
             class Question {
                 constructor(question, answers) {
                   this.question = question;
@@ -103,49 +108,43 @@
                   
             document.querySelector(".main__item").addEventListener("click", ()=> quize(questionArray));
         </pre>
-      </div>
+    </div>
+  </section>
+</main>
+
+<body>
+  <footer class="footer u-margin-top-medium">
+    <section class="footer__section">
+      <ul>
+        <li>get in touch &rarr;</li>
+        <li>
+          <a href="https://twitter.com/qu1etRain">
+            <img class="icon"
+                 src="https://image.flaticon.com/icons/svg/59/59046.svg" />
+          </a>
+        </li>
+        <li>
+          <a href="https://codepen.io/VitaliiLynnyk">
+            <img class="icon"
+                 src="http://cdn.onlinewebfonts.com/svg/img_336066.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/VitaliiLynnyk">
+            <img class="icon"
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Feather-logos-github.svg/1024px-Feather-logos-github.svg.png" />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/vitalii.lynnyk/">
+            <img class="icon"
+                 src="https://cdn2.iconfinder.com/data/icons/social-networks-18/100/Instagram_logo-512.png" />
+          </a>
+        </li>
+      </ul>
     </section>
-  </main>
-  <body>
-    <footer class="footer u-margin-top-medium">
-      <section class="footer__section">
-        <ul>
-          <li>get in touch &rarr;</li>
-          <li>
-            <a href="https://twitter.com/qu1etRain">
-              <img
-                class="icon"
-                src="https://image.flaticon.com/icons/svg/59/59046.svg"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://codepen.io/VitaliiLynnyk">
-              <img
-                class="icon"
-                src="http://cdn.onlinewebfonts.com/svg/img_336066.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/VitaliiLynnyk">
-              <img
-                class="icon"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Feather-logos-github.svg/1024px-Feather-logos-github.svg.png"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/vitalii.lynnyk/">
-              <img
-                class="icon"
-                src="https://cdn2.iconfinder.com/data/icons/social-networks-18/100/Instagram_logo-512.png"
-              />
-            </a>
-          </li>
-        </ul>
-      </section>
-    </footer>
-    <script src="index.js"></script>
-  </body>
+  </footer>
+  <script src="index.js"></script>
+</body>
+
 </html>
